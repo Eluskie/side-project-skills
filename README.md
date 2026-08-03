@@ -1,4 +1,4 @@
-# opencode-skills
+# side-project-skills
 
 Personal collection of [opencode](https://opencode.ai) skills — reusable agent
 instructions that get loaded automatically when a task matches.
@@ -18,7 +18,7 @@ register it in your global config:
 {
   "$schema": "https://opencode.ai/config.json",
   "skills": {
-    "paths": ["~/opencode-skills/skills"]
+    "paths": ["~/side-project-skills/skills"]
   }
 }
 ```
