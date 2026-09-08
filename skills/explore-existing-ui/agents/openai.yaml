@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explore Existing UI"
+  short_description: "Explore UI while preserving its existing design language"
+  default_prompt: "Use $explore-existing-ui to explore this UI by discovering its existing design language and making a focused, consistent change."
