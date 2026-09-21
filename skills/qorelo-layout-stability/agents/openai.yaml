@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qorelo Layout Stability"
+  short_description: "Fix unintended shifts across Qorelo control states"
+  default_prompt: "Use $qorelo-layout-stability to measure and fix unintended layout shifts in this Qorelo screen."

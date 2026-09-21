@@ -11,6 +11,8 @@ instructions that get loaded automatically when a task matches.
 | [`paper-component-from-code`](skills/paper-component-from-code/SKILL.md) | Create a source-accurate Paper component board from implementation code, with a composed Example and only the states the code defines. |
 | [`paper-component-handoff`](skills/paper-component-handoff/SKILL.md) | Add concise red developer-handoff measurements to a Paper component's Example surface. |
 | [`explore-existing-ui`](skills/explore-existing-ui/SKILL.md) | Explore or refine an existing screen while preserving its visual language, component patterns, interaction conventions, and information density. |
+| [`qorelo-reusable-ui`](skills/qorelo-reusable-ui/SKILL.md) | Build or refine Qorelo React UI using canonical shared components, the existing design system, and minimal readable code. |
+| [`qorelo-layout-stability`](skills/qorelo-layout-stability/SKILL.md) | Measure and fix unintended layout shifts in Qorelo controls across interaction and loading states. |
 
 ## Using these skills
 
@@ -28,5 +30,5 @@ register it in your global config:
 
 or copy individual skill folders into `~/.config/opencode/skills/<name>/`.
 
-Skills are project-agnostic by design — no references to any specific app,
-repo, domain, or server.
+General skills are project-agnostic. Skills prefixed with `qorelo-` are scoped
+to Qorelo and reference its existing components and design guidance.

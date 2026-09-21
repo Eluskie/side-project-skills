@@ -1,0 +1,4 @@
+interface:
+  display_name: "Qorelo Reusable UI"
+  short_description: "Build Qorelo UI from canonical shared components"
+  default_prompt: "Use $qorelo-reusable-ui to update this Qorelo screen with canonical shared components and minimal readable code."
