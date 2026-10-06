@@ -1,7 +1,8 @@
 # side-project-skills
 
-Personal collection of [opencode](https://opencode.ai) skills — reusable agent
-instructions that get loaded automatically when a task matches.
+Personal collection of reusable agent skills for Codex and
+[opencode](https://opencode.ai). Skills give an agent instructions and supporting
+resources for repeatable workflows.
 
 ## Skills
 
@@ -13,8 +14,51 @@ instructions that get loaded automatically when a task matches.
 | [`explore-existing-ui`](skills/explore-existing-ui/SKILL.md) | Explore or refine an existing screen while preserving its visual language, component patterns, interaction conventions, and information density. |
 | [`qorelo-reusable-ui`](skills/qorelo-reusable-ui/SKILL.md) | Build or refine Qorelo React UI using canonical shared components, the existing design system, and minimal readable code. |
 | [`qorelo-layout-stability`](skills/qorelo-layout-stability/SKILL.md) | Measure and fix unintended layout shifts in Qorelo controls across interaction and loading states. |
+| [`ui-before-after`](skills/ui-before-after/SKILL.md) | Capture real before-and-after UI screenshots from the original worktree state with matching framing, coherent screen context, and only Before/After labels. |
 
 ## Using these skills
+
+### Codex
+
+To install the UI screenshot skill for all your projects, run:
+
+```sh
+npx skills add Eluskie/side-project-skills --skill ui-before-after --agent codex --global
+```
+
+With pnpm, the equivalent command is:
+
+```sh
+pnpm dlx skills add Eluskie/side-project-skills --skill ui-before-after --agent codex --global
+```
+
+These commands use the [skills CLI](https://github.com/vercel-labs/skills).
+Omit `--global` to install in the current project. The installer downloads the
+complete skill folder from GitHub, including scripts and reference images;
+this repository does not need to be published as an npm package.
+
+Alternatively, paste this into Codex:
+
+```text
+$skill-installer install ui-before-after from https://github.com/Eluskie/side-project-skills/tree/main/skills/ui-before-after
+```
+
+Codex discovers installed skills automatically. If the skill does not appear,
+restart Codex. See the [official OpenAI skills documentation](https://learn.chatgpt.com/docs/build-skills).
+
+Once installed, ask Codex:
+
+```text
+$ui-before-after Show before-and-after screenshots for this UI change.
+```
+
+The skill's baseline helper needs Node.js and Git. Screenshot capture uses your
+project's preview server, installed dependencies, and browser tooling. The
+Qorelo-specific runner described in the reference is optional; other projects
+use their own capture tooling. The generic helper and framing references are
+included in the skill.
+
+### opencode
 
 opencode scans for `**/SKILL.md` inside skill directories. Clone this repo and
 register it in your global config:
