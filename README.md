@@ -8,6 +8,7 @@ resources for repeatable workflows.
 
 | Skill | Description |
 | ----- | ----------- |
+| [`review-pr`](skills/review-pr/SKILL.md) | Review a PR or local change against the user’s job, correctness, and code simplicity, including duplication, unused code, and justified component reuse. |
 | [`dokploy-deploy`](skills/dokploy-deploy/SKILL.md) | Deploy / redeploy / fix a web app on your own VPS via Dokploy (Docker Compose + Traefik), including data-preserving redeploys, domain/cert management, and diagnosing "site won't load / keeps bouncing" issues. |
 | [`paper-component-from-code`](skills/paper-component-from-code/SKILL.md) | Create a source-accurate Paper component board from implementation code, with a composed Example and only the states the code defines. |
 | [`paper-component-handoff`](skills/paper-component-handoff/SKILL.md) | Add concise red developer-handoff measurements to a Paper component's Example surface. |
